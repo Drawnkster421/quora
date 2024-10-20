@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: calc(15px);
+	line-height: 1.4;
+	/* color: rgb(213, 214, 214);*/
+	direction: ltr;
+	color: #282829;
+	@apply dark:text-[rgb(213,214,214)] scroll-smooth;
+}
+.animate-bounce-custom {
+	animation: bounce 1s infinite;
+}
+@keyframes bounce {
+	0%,
+	100% {
+		transform: translateY(-50%);
+		animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+	}
+	50% {
+		transform: translateY(0);
+		animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+	}
+}
